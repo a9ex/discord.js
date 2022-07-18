@@ -55,9 +55,11 @@ export class EmbedBuilder {
 	/**
 	 * Adds a field to the embed (max 25)
 	 *
-	 * @param field The field to add.
+	 * @param name The name of this field
+	 * @param value The value of this field
+	 * @param inline If this field will be displayed inline
 	 */
-	public addField(name: string, value: string, inline: boolean): this {
+	public addField(name: string, value: string, inline: boolean | null): this {
 		return this.addFields({name, value, inline});
 	}
 
