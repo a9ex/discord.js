@@ -51,6 +51,16 @@ export class EmbedBuilder {
 		if (data.timestamp) this.data.timestamp = new Date(data.timestamp).toISOString();
 	}
 
+
+	/**
+	 * Adds a field to the embed (max 25)
+	 *
+	 * @param field The field to add.
+	 */
+	public addField(name: string, value: string, inline: boolean): this {
+		return this.addFields({name, value, inline});
+	}
+
 	/**
 	 * Adds fields to the embed (max 25)
 	 *
