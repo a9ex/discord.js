@@ -9,6 +9,7 @@
 		"lint": "yarn workspaces foreach -p -t run lint",
 		"format": "yarn workspaces foreach -p -t run format",
 		"fmt": "yarn format",
+		"postinstall": "is-ci || husky install",
 		"docs": "yarn workspaces foreach -p -t run docs",
 		"changelog": "yarn workspaces foreach -p -t run changelog",
 		"update": "yarn upgrade-interactive"
